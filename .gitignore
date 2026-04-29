@@ -218,4 +218,8 @@ __marimo__/
 .streamlit/secrets.toml
 
 data/
+!lstm/data/
+
 *.pt
+
+lstm/data/vocab.pkl
