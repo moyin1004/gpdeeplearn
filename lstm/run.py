@@ -8,7 +8,8 @@ from tensorboardX import SummaryWriter
 
 dataset = "."  # 数据集
 # 搜狗新闻:embedding_SougouNews.npz, 腾讯:embedding_Tencent.npz, 随机初始化:random
-embedding = 'embedding_SougouNews.npz'  # 词向量
+# embedding = 'embedding_SougouNews.npz'  # 词向量
+embedding = 'embedding_Tencent.npz'  # 词向量
 model_name = 'TextRNN'  # TextCNN, TextRNN, FastText
 word = False # True for word, False for char
 

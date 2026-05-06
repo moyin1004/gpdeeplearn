@@ -49,11 +49,13 @@ class Model(nn.Module):
             self.embedding = nn.Embedding(config.n_vocab, config.embed, padding_idx=config.n_vocab - 1)
         self.lstm = nn.LSTM(config.embed, config.hidden_size, config.num_layers,
                             bidirectional=True, batch_first=True, dropout=config.dropout)
+        # 双向lstm输出维度为hidden_size*2
         self.fc = nn.Linear(config.hidden_size * 2, config.num_classes)
 
     def forward(self, x):
         x, _ = x
-        out = self.embedding(x)  # [batch_size, seq_len, embeding]=[128, 32, 300]
+        out = self.embedding(x)  # [batch_size, seq_len, embeding=hidden_size*2]=[128, 32, 512]
         out, _ = self.lstm(out)
+        print("out size:", out.size())
         out = self.fc(out[:, -1, :])  # 句子最后时刻的 hidden state
         return out
