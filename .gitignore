@@ -223,3 +223,6 @@ data/
 *.pt
 
 lstm/data/vocab.pkl
+
+distilbert-base-uncased-imdb/
+results/
