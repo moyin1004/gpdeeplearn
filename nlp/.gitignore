@@ -1,0 +1,3 @@
+dataset/ptb.*.npy
+dataset/ptb.vocab.pkl
+dataset/ptb.*.txt
