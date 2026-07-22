@@ -1,4 +1,4 @@
 # gpdeeplearn
 
-python 3.12
-torch  2.11.0+cu128
+python 3.14
+torch  2.12.1+cu132
